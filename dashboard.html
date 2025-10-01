@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - ToDo App</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; display:flex; height:100vh; }
+    .sidebar { width:200px; background:#76787b; color:#fff; padding:20px; }
+    .sidebar h2 { color:#fff; }
+    .sidebar a { display:block; color:#fff; text-decoration:none; padding:10px 0; }
+    .sidebar a:hover { background:#444; }
+    .main { flex:1; padding:20px; background:#f9f9f9; }
+    .stats { display:flex; gap:20px; margin-bottom:20px; }
+    .stat-box { flex:1; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1); text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Catelog</h2>
+    <a href="dashboard.php">Dashboard</a>
+    <a href="tasks.php">My Tasks</a>
+    <a href="logout.php">Logout</a>
+  </div>
+  <div class="main">
+    <h1>Dashboard</h1>
+    <div class="stats">
+      <div class="stat-box">Total Tasks: 0</div>
+      <div class="stat-box">Completed: 0</div>
+      <div class="stat-box">Overdue: 0</div>
+    </div>
+    <canvas id="taskChart" width="400" height="200"></canvas>
+  </div>
+</body>
+</html>

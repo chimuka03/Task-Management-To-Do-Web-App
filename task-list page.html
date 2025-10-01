@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Tasks</title>
+  <style>
+    body { font-family: Arial, Arial; padding:20px; background:#f4f4f4; }
+    h1 { margin-bottom:20px; }
+    form { margin-bottom:20px; background:#fff; padding:15px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    input, textarea, select { width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+    button { padding:10px 15px; background:#28a745; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+    button:hover { background:#218838; }
+    .task { background:#fff; padding:15px; margin-bottom:10px; border-radius:8px; box-shadow:0 0 5px rgba(0,0,0,0.1); }
+    .completed { text-decoration: line-through; color:gray; }
+  </style>
+</head>
+<body>
+  <h1>Create Task</h1>
+  <form id="taskForm" method="POST" action="task_add.php">
+    <input type="text" name="title" placeholder="Task Title" required>
+    <textarea name="description" placeholder="Task Description(Optional)"></textarea>
+    <select name="status">
+      <option value="pending">Pending</option>
+      <option value="in-progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+    <input type="date" name="deadline" required>
+    <button type="submit">Add Task</button>
+  </form>
+
+</body>
+</html>
