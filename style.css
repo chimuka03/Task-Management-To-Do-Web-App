@@ -1,0 +1,257 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White container */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+    background: #000000; /* Black header */
+    color: #ffffff; /* White text */
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #000000; /* Black nav background */
+    padding: 10px 0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff; /* White links */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #333333; /* Dark gray hover */
+}
+
+/* Forms */
+form {
+    background: #f9f9f9; /* Very light gray form background */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+    border: 1px solid #999999; /* Medium gray border */
+    border-radius: 4px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #000000; /* Black border on focus */
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background: #000000; /* Black button */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #333333; /* Dark gray on hover */
+}
+
+/* Task List */
+.task-item {
+    background: #ffffff; /* White task background */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+    background: #f0f0f0; /* Light gray for completed */
+}
+
+.delete-btn {
+    background: #000000; /* Black delete button */
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #555555; /* Medium gray on hover */
+}
+
+/* Edit Form */
+.edit-form {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* Priority Colors */
+.priority-low {
+    border-left: 4px solid #000000; /* Black */
+}
+
+.priority-medium {
+    border-left: 4px solid #555555; /* Dark gray */
+}
+
+.priority-high {
+    border-left: 4px solid #222222; /* Very dark gray */
+}
+
+/* Messages */
+.success {
+    color: #000000;
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: #000000;
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Search Bar */
+.search-form {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+}
+
+.search-form select {
+    width: 150px;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background: #333333;
+}
+
+.pagination a[style*="background: #333333;"] {
+    background: #000000;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-form {
+        flex-direction: column;
+    }
+    .search-form input[type="text"], .search-form select {
+        width: 100%;
+    }
+}
