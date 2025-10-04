@@ -20,7 +20,7 @@
 
  Demo Credentials
 - Username: `admin`
-- Password: `password123`
+- Password: `1234567`
 - (Create more users via registration.)
 
  Setup Instructions
@@ -58,4 +58,5 @@ License
 MIT License – feel free to use and modify.
 
 Issues/Contributions
+
 Report bugs or suggest features via GitHub Issues. Pull requests welcome!
